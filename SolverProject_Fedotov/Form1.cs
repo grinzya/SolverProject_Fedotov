@@ -22,17 +22,17 @@ namespace SolverProject_Fedotov
         private void button1_Click(object sender, EventArgs e)
         {
             Stenka_Model sm = new Stenka_Model();
-            sm.l_ogn = 24d;
-            sm.l_1 = 1;
-            sm.l_2 = 0.2d;
-            sm.c1 = 1d;
-            sm.c2 = 8d;
-            sm.x0 = 200;
-            sm.t_rab = 900d;
-            sm.t_okr = 20d;
-            sm.t_np = 40d;
-            sm.a_nar = 100d;
-            sm.a_rab = 500d;
+            sm.l_ogn = Double.Parse(Tb_l_ogn.Text);
+            sm.l_1 = Double.Parse(Tb_l_1.Text);
+            sm.l_2 = Double.Parse(Tb_l_2.Text);
+            sm.c1 = Double.Parse(Tb_C1.Text);
+            sm.c2 = Double.Parse(Tb_C2.Text);
+            sm.x0 = Double.Parse(Tb_x0.Text);
+            sm.t_rab = Double.Parse(Tb_trab.Text);
+            sm.t_okr = Double.Parse(Tb_tokr.Text);
+            sm.t_np = Double.Parse(Tb_tnp.Text);
+            sm.a_nar = Double.Parse(Tb_anar.Text);
+            sm.a_rab = Double.Parse(Tb_arab.Text);
             List<SolverRow> solverList = new List<SolverRow>();
             solverList.Add(new SolverRow { xId = 1, Koef_C = sm.c1 });
             solverList.Add(new SolverRow { xId = 2, Koef_C = sm.c2 });
