@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.Tb_l_ogn = new System.Windows.Forms.TextBox();
             this.Tb_l_1 = new System.Windows.Forms.TextBox();
             this.Tb_l_2 = new System.Windows.Forms.TextBox();
@@ -55,10 +60,22 @@
             this.Gb_Temp = new System.Windows.Forms.GroupBox();
             this.Gb_Cost = new System.Windows.Forms.GroupBox();
             this.Gb_K_Tepl = new System.Windows.Forms.GroupBox();
+            this.Tab_cont = new System.Windows.Forms.TabControl();
+            this.tb_Input = new System.Windows.Forms.TabPage();
+            this.tp_Graph = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.X1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.X2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gb_Koef_Tepl.SuspendLayout();
             this.Gb_Temp.SuspendLayout();
             this.Gb_Cost.SuspendLayout();
             this.Gb_K_Tepl.SuspendLayout();
+            this.Tab_cont.SuspendLayout();
+            this.tb_Input.SuspendLayout();
+            this.tp_Graph.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Tb_l_ogn
@@ -67,6 +84,7 @@
             this.Tb_l_ogn.Name = "Tb_l_ogn";
             this.Tb_l_ogn.Size = new System.Drawing.Size(100, 20);
             this.Tb_l_ogn.TabIndex = 0;
+            this.Tb_l_ogn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_l_1
             // 
@@ -74,6 +92,7 @@
             this.Tb_l_1.Name = "Tb_l_1";
             this.Tb_l_1.Size = new System.Drawing.Size(100, 20);
             this.Tb_l_1.TabIndex = 0;
+            this.Tb_l_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_l_2
             // 
@@ -81,6 +100,7 @@
             this.Tb_l_2.Name = "Tb_l_2";
             this.Tb_l_2.Size = new System.Drawing.Size(100, 20);
             this.Tb_l_2.TabIndex = 0;
+            this.Tb_l_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_trab
             // 
@@ -88,6 +108,7 @@
             this.Tb_trab.Name = "Tb_trab";
             this.Tb_trab.Size = new System.Drawing.Size(100, 20);
             this.Tb_trab.TabIndex = 0;
+            this.Tb_trab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_tnp
             // 
@@ -95,6 +116,7 @@
             this.Tb_tnp.Name = "Tb_tnp";
             this.Tb_tnp.Size = new System.Drawing.Size(100, 20);
             this.Tb_tnp.TabIndex = 0;
+            this.Tb_tnp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_tokr
             // 
@@ -102,6 +124,7 @@
             this.Tb_tokr.Name = "Tb_tokr";
             this.Tb_tokr.Size = new System.Drawing.Size(100, 20);
             this.Tb_tokr.TabIndex = 0;
+            this.Tb_tokr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_C1
             // 
@@ -109,6 +132,7 @@
             this.Tb_C1.Name = "Tb_C1";
             this.Tb_C1.Size = new System.Drawing.Size(100, 20);
             this.Tb_C1.TabIndex = 0;
+            this.Tb_C1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_C2
             // 
@@ -116,13 +140,15 @@
             this.Tb_C2.Name = "Tb_C2";
             this.Tb_C2.Size = new System.Drawing.Size(100, 20);
             this.Tb_C2.TabIndex = 0;
+            this.Tb_C2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_x0
             // 
-            this.Tb_x0.Location = new System.Drawing.Point(642, 265);
+            this.Tb_x0.Location = new System.Drawing.Point(713, 319);
             this.Tb_x0.Name = "Tb_x0";
             this.Tb_x0.Size = new System.Drawing.Size(100, 20);
             this.Tb_x0.TabIndex = 0;
+            this.Tb_x0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_arab
             // 
@@ -130,6 +156,7 @@
             this.Tb_arab.Name = "Tb_arab";
             this.Tb_arab.Size = new System.Drawing.Size(100, 20);
             this.Tb_arab.TabIndex = 0;
+            this.Tb_arab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // Tb_anar
             // 
@@ -137,10 +164,11 @@
             this.Tb_anar.Name = "Tb_anar";
             this.Tb_anar.Size = new System.Drawing.Size(100, 20);
             this.Tb_anar.TabIndex = 0;
+            this.Tb_anar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_l_2_KeyPress);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 408);
+            this.button1.Location = new System.Drawing.Point(556, 417);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -187,7 +215,7 @@
             // Lbl_tnp
             // 
             this.Lbl_tnp.AutoSize = true;
-            this.Lbl_tnp.Location = new System.Drawing.Point(15, 50);
+            this.Lbl_tnp.Location = new System.Drawing.Point(23, 52);
             this.Lbl_tnp.Name = "Lbl_tnp";
             this.Lbl_tnp.Size = new System.Drawing.Size(124, 13);
             this.Lbl_tnp.TabIndex = 2;
@@ -223,7 +251,7 @@
             // Lbl_x0
             // 
             this.Lbl_x0.AutoSize = true;
-            this.Lbl_x0.Location = new System.Drawing.Point(410, 265);
+            this.Lbl_x0.Location = new System.Drawing.Point(481, 319);
             this.Lbl_x0.Name = "Lbl_x0";
             this.Lbl_x0.Size = new System.Drawing.Size(207, 13);
             this.Lbl_x0.TabIndex = 2;
@@ -255,7 +283,7 @@
             this.Gb_Koef_Tepl.Controls.Add(this.lbl_l_ogn);
             this.Gb_Koef_Tepl.Controls.Add(this.Lbl_l1);
             this.Gb_Koef_Tepl.Controls.Add(this.Lbl_l_2);
-            this.Gb_Koef_Tepl.Location = new System.Drawing.Point(31, 10);
+            this.Gb_Koef_Tepl.Location = new System.Drawing.Point(39, 81);
             this.Gb_Koef_Tepl.Name = "Gb_Koef_Tepl";
             this.Gb_Koef_Tepl.Size = new System.Drawing.Size(328, 118);
             this.Gb_Koef_Tepl.TabIndex = 3;
@@ -270,7 +298,7 @@
             this.Gb_Temp.Controls.Add(this.Tb_tokr);
             this.Gb_Temp.Controls.Add(this.Lbl_trab);
             this.Gb_Temp.Controls.Add(this.Lbl_tnp);
-            this.Gb_Temp.Location = new System.Drawing.Point(426, 12);
+            this.Gb_Temp.Location = new System.Drawing.Point(484, 81);
             this.Gb_Temp.Name = "Gb_Temp";
             this.Gb_Temp.Size = new System.Drawing.Size(316, 115);
             this.Gb_Temp.TabIndex = 4;
@@ -283,7 +311,7 @@
             this.Gb_Cost.Controls.Add(this.Tb_C2);
             this.Gb_Cost.Controls.Add(this.Lbl_C1);
             this.Gb_Cost.Controls.Add(this.Lbl_C2);
-            this.Gb_Cost.Location = new System.Drawing.Point(50, 140);
+            this.Gb_Cost.Location = new System.Drawing.Point(58, 211);
             this.Gb_Cost.Name = "Gb_Cost";
             this.Gb_Cost.Size = new System.Drawing.Size(305, 84);
             this.Gb_Cost.TabIndex = 5;
@@ -296,25 +324,105 @@
             this.Gb_K_Tepl.Controls.Add(this.Tb_arab);
             this.Gb_K_Tepl.Controls.Add(this.lbl_arab);
             this.Gb_K_Tepl.Controls.Add(this.lbl_anar);
-            this.Gb_K_Tepl.Location = new System.Drawing.Point(39, 248);
+            this.Gb_K_Tepl.Location = new System.Drawing.Point(47, 319);
             this.Gb_K_Tepl.Name = "Gb_K_Tepl";
             this.Gb_K_Tepl.Size = new System.Drawing.Size(316, 108);
             this.Gb_K_Tepl.TabIndex = 6;
             this.Gb_K_Tepl.TabStop = false;
             this.Gb_K_Tepl.Text = "Коэффициенты теплоотдачи";
             // 
+            // Tab_cont
+            // 
+            this.Tab_cont.Controls.Add(this.tb_Input);
+            this.Tab_cont.Controls.Add(this.tp_Graph);
+            this.Tab_cont.Location = new System.Drawing.Point(12, 12);
+            this.Tab_cont.Name = "Tab_cont";
+            this.Tab_cont.SelectedIndex = 0;
+            this.Tab_cont.Size = new System.Drawing.Size(929, 513);
+            this.Tab_cont.TabIndex = 7;
+            // 
+            // tb_Input
+            // 
+            this.tb_Input.Controls.Add(this.button1);
+            this.tb_Input.Controls.Add(this.Gb_K_Tepl);
+            this.tb_Input.Controls.Add(this.Gb_Temp);
+            this.tb_Input.Controls.Add(this.Gb_Cost);
+            this.tb_Input.Controls.Add(this.Tb_x0);
+            this.tb_Input.Controls.Add(this.Gb_Koef_Tepl);
+            this.tb_Input.Controls.Add(this.Lbl_x0);
+            this.tb_Input.Location = new System.Drawing.Point(4, 22);
+            this.tb_Input.Name = "tb_Input";
+            this.tb_Input.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_Input.Size = new System.Drawing.Size(921, 487);
+            this.tb_Input.TabIndex = 0;
+            this.tb_Input.Text = "Входные данные";
+            this.tb_Input.UseVisualStyleBackColor = true;
+            // 
+            // tp_Graph
+            // 
+            this.tp_Graph.Controls.Add(this.dataGridView1);
+            this.tp_Graph.Controls.Add(this.chart1);
+            this.tp_Graph.Location = new System.Drawing.Point(4, 22);
+            this.tp_Graph.Name = "tp_Graph";
+            this.tp_Graph.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_Graph.Size = new System.Drawing.Size(921, 487);
+            this.tp_Graph.TabIndex = 1;
+            this.tp_Graph.Text = "График";
+            this.tp_Graph.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(453, 15);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "X1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "X2";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(462, 460);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title1.Name = "X";
+            title1.Text = "Толщины стенок";
+            this.chart1.Titles.Add(title1);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.X1,
+            this.X2});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(245, 47);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // X1
+            // 
+            this.X1.HeaderText = "X1";
+            this.X1.Name = "X1";
+            this.X1.ReadOnly = true;
+            // 
+            // X2
+            // 
+            this.X2.HeaderText = "X2";
+            this.X2.Name = "X2";
+            this.X2.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Gb_K_Tepl);
-            this.Controls.Add(this.Tb_x0);
-            this.Controls.Add(this.Gb_Cost);
-            this.Controls.Add(this.Gb_Temp);
-            this.Controls.Add(this.Gb_Koef_Tepl);
-            this.Controls.Add(this.Lbl_x0);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(953, 521);
+            this.Controls.Add(this.Tab_cont);
             this.Name = "Form1";
             this.Text = "Форма рассчёта";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -326,8 +434,13 @@
             this.Gb_Cost.PerformLayout();
             this.Gb_K_Tepl.ResumeLayout(false);
             this.Gb_K_Tepl.PerformLayout();
+            this.Tab_cont.ResumeLayout(false);
+            this.tb_Input.ResumeLayout(false);
+            this.tb_Input.PerformLayout();
+            this.tp_Graph.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -360,6 +473,13 @@
         private System.Windows.Forms.GroupBox Gb_Temp;
         private System.Windows.Forms.GroupBox Gb_Cost;
         private System.Windows.Forms.GroupBox Gb_K_Tepl;
+        private System.Windows.Forms.TabControl Tab_cont;
+        private System.Windows.Forms.TabPage tb_Input;
+        private System.Windows.Forms.TabPage tp_Graph;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn X1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn X2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
