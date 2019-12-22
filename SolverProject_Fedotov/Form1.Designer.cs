@@ -198,9 +198,9 @@
             this.Lbl_tokr.AutoSize = true;
             this.Lbl_tokr.Location = new System.Drawing.Point(15, 78);
             this.Lbl_tokr.Name = "Lbl_tokr";
-            this.Lbl_tokr.Size = new System.Drawing.Size(45, 13);
+            this.Lbl_tokr.Size = new System.Drawing.Size(176, 13);
             this.Lbl_tokr.TabIndex = 2;
-            this.Lbl_tokr.Text = "Lbl_tokr";
+            this.Lbl_tokr.Text = " наружной поверхности (tНПmax )";
             // 
             // Lbl_C1
             // 
@@ -317,6 +317,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Форма рассчёта";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Gb_Koef_Tepl.ResumeLayout(false);
             this.Gb_Koef_Tepl.PerformLayout();
             this.Gb_Temp.ResumeLayout(false);

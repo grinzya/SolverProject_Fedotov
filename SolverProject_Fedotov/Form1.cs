@@ -78,5 +78,20 @@ namespace SolverProject_Fedotov
                 MessageBox.Show("При решении задачи оптимизации возникла исключительная ситуация.");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Tb_l_ogn.Text = "24";
+            Tb_l_1.Text = "1";
+            Tb_l_2.Text = "0,2";
+            Tb_C1.Text = "1";
+            Tb_C2.Text = "8";
+            Tb_x0.Text = "200";
+            Tb_trab.Text = "900";
+            Tb_tokr.Text = "20";
+            Tb_tnp.Text = "40";
+            Tb_anar.Text = "100";
+            Tb_arab.Text = "500";
+        }
     }
 }
