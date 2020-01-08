@@ -32,6 +32,7 @@ namespace SolverProject_Fedotov
             {
                 tp_Graph.Parent = Tab_cont;
                 chart1.Series[0].Points.Clear();
+                chart1.Series[1].Points.Clear();
                 sm.l_ogn = Double.Parse(Tb_l_ogn.Text);
                 sm.l_1 = Double.Parse(Tb_l_1.Text);
                 sm.l_2 = Double.Parse(Tb_l_2.Text);
@@ -92,7 +93,16 @@ namespace SolverProject_Fedotov
                 double x2 = Math.Round(choose.GetDouble(solverList[1].xId), 3);
                 this.chart1.Series[0].Points.AddXY("Толщина стенок, м", x1);
                 this.chart1.Series[1].Points.AddXY("Толщина стенок, м", x2);
-                dataGridView1.Rows.Add(x1, x2);
+                if (dataGridView1.RowCount == 1)
+                {
+                    dataGridView1[0, 0].Value = x1;
+                    dataGridView1[1, 0].Value = x2;
+                }
+                else
+                {
+                    dataGridView1.Rows.Add(x1, x2);
+                }
+                
                 
             }
 
