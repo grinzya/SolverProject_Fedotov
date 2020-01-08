@@ -47,6 +47,7 @@ namespace SolverProject_Fedotov
                 solverList.Add(new SolverRow { xId = 1, Koef_C = sm.c1 });
                 solverList.Add(new SolverRow { xId = 2, Koef_C = sm.c2 });
                 SolverContext cntxt = SolverContext.GetContext();
+                cntxt.ClearModel();
                 Model model = cntxt.CreateModel();
                 Set users = new Set(Domain.Any, "users");
 
@@ -73,13 +74,13 @@ namespace SolverProject_Fedotov
                     Solution solution = cntxt.Solve();
                     Report report = solution.GetReport();
 
-                    String reportStr = "";
+                    //String reportStr = "";
 
-                    for (int i = 0; i < solverList.Count; i++)
-                    {
-                        reportStr += "Значение X" + (i + 1).ToString() + ": " + choose.GetDouble(solverList[i].xId) + "\n";
-                    }
-                    reportStr += "\n" + report.ToString();
+                    //for (int i = 0; i < solverList.Count; i++)
+                    //{
+                    //    reportStr += "Значение X" + (i + 1).ToString() + ": " + choose.GetDouble(solverList[i].xId) + "\n";
+                    //}
+                   // reportStr += "\n" + report.ToString();
 
                     //MessageBox.Show(reportStr);
                 }
